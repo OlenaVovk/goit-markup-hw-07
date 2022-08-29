@@ -1,0 +1,33 @@
+.characteristic {
+    padding-bottom: 0;
+}
+
+.characteristic__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.characteristic__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.characteristic__container {
+    min-width: 270px;
+    min-height: 248px;
+}
+
+.characteristic__icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    background-color: var(--accent-section-color);
+    margin-bottom: 30px;
+}
+
+.characteristic__point {
+    line-height: 1.71;
+    margin-top: 0;
+    margin-bottom: 0;
+}

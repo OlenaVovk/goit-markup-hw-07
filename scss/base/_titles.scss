@@ -1,0 +1,31 @@
+.characteristic__title,
+.activities__title,
+.team__title,
+.people-card__title,
+.clients__title,
+.footer__title,
+.product-card__title {
+    color: var(--title-text-color);
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.activities__title,
+.team__title,
+.clients__title {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+}
+
+.characteristic__title,
+.activities__text,
+.footer__title {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
