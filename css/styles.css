@@ -85,7 +85,7 @@ img {
 .people-card__title,
 .clients__title,
 .footer__title,
-.example-list .subtitle {
+.product-card__title {
     color: var(--title-text-color);
     font-weight: 700;
     margin-top: 0;
@@ -114,6 +114,7 @@ img {
 
 /*===== кнопка =====*/
 
+
 .button {
     color: var(--secondary-accent-color);
     font-family: var(--primary-text-family);
@@ -127,7 +128,7 @@ img {
     border: 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
-    transition: background 250ms var(--primary-timing-function),
+    transition: background-color 250ms var(--primary-timing-function),
         box-shadow 250ms var(--primary-timing-function);
 }
 
@@ -838,17 +839,17 @@ img {
 
 
 
-.portfolio .buttons {
+.buttons-list {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 } 
 
-.buttons .port-btn-list-item:not(:last-child) {
+.buttons-list__item:not(:last-child) {
     margin-right: 8px;
 }
 
-.buttons .port-btn {
+.buttons-list__button {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63; 
@@ -862,28 +863,28 @@ img {
                 box-shadow 250ms var(--primary-timing-function); 
 }
 
-.buttons .button-all {
+.buttons-list__button--btn-all {
     min-width: 74px;
 }
 
-.buttons .button-veb {
+.buttons-list__button--btn-veb {
     min-width: 124px;
 }
 
-.buttons .button-app{
+.buttons-list__button--btn-app {
     min-width: 112px;
 }
 
-.buttons .button-des{
+.buttons-list__button--btn-des {
     min-width: 104px;
 }
 
-.buttons .button-mar{
+.buttons-list__button--btn-mar {
     min-width: 130px;
 }
 
-.buttons .port-btn:hover,
-.buttons .port-btn:focus {
+.buttons-list__button:hover,
+.buttons-list__button:focus {
     background-color: var(--accent-color);
     color: var(--secondary-accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -896,35 +897,35 @@ img {
     margin-top: -30px;
 }
 
-.port-list-item {
+.example-list__item {
     flex-basis: calc((100% - 90px)/ 3);
     margin-left: 30px;
     margin-top: 30px;
 
-
-    /*outline: 2px solid teal;*/
 }
 
-.position-text-container {
+.product-card {
+    transition: box-shadow 250ms var(--primary-timing-function);
+}
+
+.product-card:hover,
+.product-card:focus {
+    display: block;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.product-card__wrapper {
     position: relative;
     overflow: hidden;
 }
 
-.position-text-container::before {
+.product-card__wrapper::before {
     content: "";
     background: rgba(33, 150, 243, 0.9);
 }
 
-.position-text {
-    padding: 63px 24px 63px 24px;
-    margin: 0;
-    color: var(--secondary-accent-color);
-    font-size: 18px;
-    line-height: 1.56;
-}
-
-.position-text-container::before,
-.position-text {
+.product-card__wrapper::before,
+.product-card__text {
     position: absolute;
     top: 0;
     left: 0;
@@ -936,22 +937,22 @@ img {
     
 }
 
-.port-link {
-    transition: box-shadow 250ms var(--primary-timing-function);
+.product-card__text {
+    padding: 63px 24px 63px 24px;
+    margin: 0;
+    color: var(--secondary-accent-color);
+    font-size: 18px;
+    line-height: 1.56;
 }
 
-.port-link:hover,
-.port-link:focus {
-    display: block;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.port-link:hover .position-text-container::before,
-.port-link:hover .position-text {
+.product-card:hover .product-card__wrapper::before,
+.product-card:hover .product-card__text {
     transform: translateY(0);
 }
 
-.port-wrapper {
+
+
+.product-card__container {
     border: 1px solid var(--border-div-color);
     border-top: none;
     padding-top: 20px;
@@ -962,7 +963,7 @@ img {
    /* outline: 2px solid #2196F3;*/
 }
 
-.example-list .subtitle {
+.product-card__title {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -972,7 +973,7 @@ img {
    /*outline: 2px solid teal; */
 }
 
-.example-list .lists {
+.product-card__point {
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.88;
