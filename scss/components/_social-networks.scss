@@ -5,11 +5,8 @@
 }
 
 .social-network__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
+    @extend %flex;
+    @include format (44px, 44px);
     border-radius: 50%;
     transition: background-color 250ms var(--primary-timing-function);
 

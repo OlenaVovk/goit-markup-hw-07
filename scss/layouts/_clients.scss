@@ -3,9 +3,8 @@
 }
 
 .clients__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex;
+    @include format (170px, 92px);
     width: 170px;
     height: 92px;
     border: 1px solid var(--icon-color);

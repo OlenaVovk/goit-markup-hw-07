@@ -33,8 +33,7 @@
         top: 0;
         left: 0;
         display: block;
-        width: 100%;
-        height: 100%;
+        @include format (100%, 100%);
         transform: translateY(100%);
         transition: transform 250ms var(--primary-timing-function);
         content: "";
@@ -53,8 +52,7 @@
     left: 0;
     transform: translateY(100%);
     display: block;
-    width: 100%;
-    height: 100%;
+    @include format (100%, 100%);
     padding: 63px 24px 63px 24px;
     margin: 0;
     color: var(--secondary-accent-color);
@@ -77,9 +75,7 @@
 }
 
 .product-card__title {
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+    @include font(18px, 2, 0.06em);
     margin-bottom: 4px;
     margin-top: 0;
 }

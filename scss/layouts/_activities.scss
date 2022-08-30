@@ -14,12 +14,9 @@
 }
 
 .activities__container {
+    @extend %flex;
     position: absolute;
     bottom: 0;
-    width: 370px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include format (370px, 70px);
     background-color: rgba(47, 48, 58, 0.8);
 }
