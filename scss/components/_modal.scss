@@ -27,9 +27,10 @@
     background-color: var(--secondary-accent-color);
     cursor: pointer;
     transition: fill 250ms var(--primary-timing-function);
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
 }
 
-.modal__button:hover,
-.modal__button:focus {
-    fill: var(--accent-color);
-}

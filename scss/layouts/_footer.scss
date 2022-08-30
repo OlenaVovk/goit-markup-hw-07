@@ -35,19 +35,29 @@
     font-style: normal;
 }
 
-.address-list__link-mail,
+.address-list__link-mail {
+    color: var(--text-footer-color);
+    text-decoration: none;
+    font-style: normal;
+    transition: color 250ms var(--primary-timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        }
+}
+
 .address-list__link-tel {
     color: var(--text-footer-color);
     text-decoration: none;
     font-style: normal;
     transition: color 250ms var(--primary-timing-function);
-}
 
-.address-list__link-mail:hover,
-.address-list__link-mail:focus,
-.address-list__link-tel:hover,
-.address-list__link-tel:focus {
-    color: var(--accent-color);
+    
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        }
 }
 
 .footer__social-networks {
@@ -78,18 +88,17 @@
     border-radius: 4px;
     background-color: transparent;
 
-}
-
-.submit-form__input::placeholder {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.submit-form__input:focus-within {
-    color: var(--secondary-accent-color);
+    &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    
+    &:focus-within {
+        color: var(--secondary-accent-color);
+    }
 }
 
 .submit-form__button {
